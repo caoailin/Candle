@@ -28,7 +28,7 @@
     <PrimaryOutput>Candle</PrimaryOutput>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <OutputDirectory>debug\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
     <CharacterSet>NotSet</CharacterSet>
@@ -67,7 +67,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtOpenGL;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtWidgets;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtWinExtras;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtGui;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtANGLE;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtSerialPort;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtCore;release;\include;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtOpenGL;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtWidgets;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtWinExtras;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtGui;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtANGLE;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtSerialPort;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtCore;release;\include;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\mkspecs\win32-msvc;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtUiTools;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWinExtras;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>release\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -76,7 +76,7 @@
       <ExceptionHandling>Sync</ExceptionHandling>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <Optimization>MaxSpeed</Optimization>
-      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WINDOWS;APP_VERSION="1.1.8";_USE_MATH_DEFINES;QT_NO_DEBUG;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_WINEXTRAS_LIB;QT_GUI_LIB;QT_SERIALPORT_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WINDOWS;APP_VERSION="1.1.8";_USE_MATH_DEFINES;QT_NO_DEBUG;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_WINEXTRAS_LIB;QT_GUI_LIB;QT_SERIALPORT_LIB;QT_CORE_LIB;NDEBUG;QT_NETWORK_LIB;QT_UITOOLS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
       <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -86,7 +86,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(QTDIR)\lib\Qt5OpenGL.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5WinExtras.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5SerialPort.lib;$(QTDIR)\lib\Qt5Core.lib;$(QTDIR)\lib\qtmain.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(QTDIR)\lib\Qt5OpenGL.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5WinExtras.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5SerialPort.lib;$(QTDIR)\lib\Qt5Core.lib;$(QTDIR)\lib\qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Network.lib;Qt5OpenGL.lib;opengl32.lib;glu32.lib;Qt5SerialPort.lib;Qt5UiTools.lib;Qt5Widgets.lib;Qt5WinExtras.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;E:\QT\QT5.12.0\5.12.0\MSVC2017\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
@@ -108,15 +108,15 @@
       <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WINDOWS;sNan="65536";APP_VERSION=\"1.1.8\";_USE_MATH_DEFINES;QT_NO_DEBUG;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_WINEXTRAS_LIB;QT_GUI_LIB;QT_SERIALPORT_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <QtMoc>
-      <QTDIR>E:\QT\QT5.12.0\5.12.0\MSVC2017</QTDIR>
+      <QTDIR>$(QTDIR)</QTDIR>
       <OutputFile>.\build-$(Platform)\$(Configuration)\moc_%(Filename).cpp</OutputFile>
-      <Define>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WINDOWS;APP_VERSION="1.1.8";_USE_MATH_DEFINES;QT_NO_DEBUG;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_WINEXTRAS_LIB;QT_GUI_LIB;QT_SERIALPORT_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</Define>
+      <Define>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WINDOWS;APP_VERSION="1.1.8";_USE_MATH_DEFINES;QT_NO_DEBUG;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_WINEXTRAS_LIB;QT_GUI_LIB;QT_SERIALPORT_LIB;QT_CORE_LIB;NDEBUG;QT_NETWORK_LIB;QT_UITOOLS_LIB;%(PreprocessorDefinitions)</Define>
       <CompilerFlavor>msvc</CompilerFlavor>
       <Include>./$(Configuration)/moc_predefs.h</Include>
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
       <InputFile>%(FullPath)</InputFile>
       <DynamicSource>output</DynamicSource>
-      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;E:/QT/QT5.12.0/5.12.0/MSVC2017/mkspecs/$(Platform)-msvc;.;E:/QT/QT5.12.0/5.12.0/MSVC2017/include;E:/QT/QT5.12.0/5.12.0/MSVC2017/include/QtOpenGL;E:/QT/QT5.12.0/5.12.0/MSVC2017/include/QtWidgets;E:/QT/QT5.12.0/5.12.0/MSVC2017/include/QtWinExtras;E:/QT/QT5.12.0/5.12.0/MSVC2017/include/QtGui;E:/QT/QT5.12.0/5.12.0/MSVC2017/include/QtANGLE;E:/QT/QT5.12.0/5.12.0/MSVC2017/include/QtSerialPort;E:/QT/QT5.12.0/5.12.0/MSVC2017/include/QtCore;C:\Program Files (x86)\Microsoft Visual Studio\VC98\atl\include;C:\Program Files (x86)\Microsoft Visual Studio\VC98\mfc\include;C:\Program Files (x86)\Microsoft Visual Studio\VC98\include;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt</IncludePath>
+      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtOpenGL;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtWidgets;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtWinExtras;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtGui;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtANGLE;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtSerialPort;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtCore;release;\include;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\mkspecs\win32-msvc;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtUiTools;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWinExtras;%(AdditionalIncludeDirectories)</IncludePath>
     </QtMoc>
     <QtRcc>
       <OutputFile>.\build-$(Platform)\$(Configuration)\qrc_%(Filename).cpp</OutputFile>
@@ -134,7 +134,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtOpenGL;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtWidgets;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtWinExtras;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtGui;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtANGLE;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtSerialPort;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtCore;debug;\include;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtOpenGL;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtWidgets;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtWinExtras;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtGui;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtANGLE;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtSerialPort;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\include\QtCore;debug;\include;..\..\..\QT\QT5.12.0\5.12.0\MSVC2017\mkspecs\win32-msvc;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtUiTools;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWinExtras;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -143,7 +143,7 @@
       <ExceptionHandling>Sync</ExceptionHandling>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WINDOWS;APP_VERSION="1.1.8";_USE_MATH_DEFINES;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_WINEXTRAS_LIB;QT_GUI_LIB;QT_SERIALPORT_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WINDOWS;APP_VERSION="1.1.8";_USE_MATH_DEFINES;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_WINEXTRAS_LIB;QT_GUI_LIB;QT_SERIALPORT_LIB;QT_CORE_LIB;QT_NETWORK_LIB;QT_UITOOLS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -153,7 +153,7 @@
       <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(QTDIR)\lib\Qt5OpenGLd.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5WinExtrasd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5SerialPortd.lib;$(QTDIR)\lib\Qt5Cored.lib;$(QTDIR)\lib\qtmaind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(QTDIR)\lib\Qt5OpenGLd.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5WinExtrasd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5SerialPortd.lib;$(QTDIR)\lib\Qt5Cored.lib;$(QTDIR)\lib\qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Networkd.lib;Qt5OpenGLd.lib;opengl32.lib;glu32.lib;Qt5SerialPortd.lib;Qt5UiToolsd.lib;Qt5Widgetsd.lib;Qt5WinExtrasd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;E:\QT\QT5.12.0\5.12.0\MSVC2017\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
@@ -174,25 +174,25 @@
       <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WINDOWS;APP_VERSION=\"1.1.8\";_USE_MATH_DEFINES;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_WINEXTRAS_LIB;QT_GUI_LIB;QT_SERIALPORT_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <QtMoc>
-      <QTDIR>E:\QT\QT5.12.0\5.12.0\MSVC2017</QTDIR>
+      <QTDIR>$(QTDIR)</QTDIR>
       <OutputFile>.\build-$(Platform)\$(Configuration)\moc_%(Filename).cpp</OutputFile>
-      <Define>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WINDOWS;APP_VERSION="1.1.8";_USE_MATH_DEFINES;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_WINEXTRAS_LIB;QT_GUI_LIB;QT_SERIALPORT_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</Define>
+      <Define>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WINDOWS;APP_VERSION="1.1.8";_USE_MATH_DEFINES;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_WINEXTRAS_LIB;QT_GUI_LIB;QT_SERIALPORT_LIB;QT_CORE_LIB;QT_NETWORK_LIB;QT_UITOOLS_LIB;%(PreprocessorDefinitions)</Define>
       <CompilerFlavor>msvc</CompilerFlavor>
       <Include>./$(Configuration)/moc_predefs.h</Include>
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
       <InputFile>%(FullPath)</InputFile>
       <DynamicSource>output</DynamicSource>
-      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;E:/QT/QT5.12.0/5.12.0/MSVC2017/mkspecs/$(Platform)-msvc;.;E:/QT/QT5.12.0/5.12.0/MSVC2017/include;E:/QT/QT5.12.0/5.12.0/MSVC2017/include/QtOpenGL;E:/QT/QT5.12.0/5.12.0/MSVC2017/include/QtWidgets;E:/QT/QT5.12.0/5.12.0/MSVC2017/include/QtWinExtras;E:/QT/QT5.12.0/5.12.0/MSVC2017/include/QtGui;E:/QT/QT5.12.0/5.12.0/MSVC2017/include/QtANGLE;E:/QT/QT5.12.0/5.12.0/MSVC2017/include/QtSerialPort;E:/QT/QT5.12.0/5.12.0/MSVC2017/include/QtCore;C:\Program Files (x86)\Microsoft Visual Studio\VC98\atl\include;C:\Program Files (x86)\Microsoft Visual Studio\VC98\mfc\include;C:\Program Files (x86)\Microsoft Visual Studio\VC98\include;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include;E:\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt;C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt</IncludePath>
+      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWinExtras;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtCore;debug;\include;$(QTDIR)\mkspecs\win32-msvc;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtUiTools;%(AdditionalIncludeDirectories)</IncludePath>
     </QtMoc>
     <QtRcc>
       <Compression>default</Compression>
       <OutputFile>.\build-$(Platform)\$(Configuration)\qrc_%(Filename).cpp</OutputFile>
-      <QTDIR>E:\QT\QT5.12.0\5.12.0\MSVC2017</QTDIR>
+      <QTDIR>D:\Qt\Qt5.6.2VS2013\5.6\msvc2013</QTDIR>
       <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
       <InputFile>%(FullPath)</InputFile>
     </QtRcc>
     <QtUic>
-      <QTDIR>E:\QT\QT5.12.0\5.12.0\MSVC2017</QTDIR>
+      <QTDIR>D:\Qt\Qt5.6.2VS2013\5.6\msvc2013</QTDIR>
       <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
       <InputFile>%(FullPath)</InputFile>
       <OutputFile>.\build-$(Platform)\$(Configuration)\ui_%(Filename).h</OutputFile>
@@ -392,7 +392,7 @@
   <ImportGroup Label="ExtensionTargets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties UicDir="$(Configuration)" Qt5Version_x0020_Win32="msvc2017" />
+      <UserProperties UicDir="$(Configuration)" Qt5Version_x0020_Win32="msvc2013" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

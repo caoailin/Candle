@@ -62,3 +62,8 @@ bin/*
 /src/Candle_resource.aps
 /src/Candle_resource.rc
 /src/ui_*
+src/Makefile.Debug
+src/Makefile.Release
+src/candle.sdf
+src/Makefile
+src/candle.v12.suo
