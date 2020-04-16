@@ -5,7 +5,6 @@
 #define FRMMAIN_H
 
 #include <QMainWindow>
-#include <QtSerialPort/QSerialPort>
 #include <QSettings>
 #include <QTimer>
 #include <QBasicTimer>
@@ -39,6 +38,7 @@
 
 #include "frmsettings.h"
 #include "frmabout.h"
+#include "sendif.h"
 
 #ifdef WINDOWS
     #include <QtWinExtras/QtWinExtras>
@@ -231,7 +231,7 @@ private:
     bool m_programLoading;
     bool m_settingsLoading;
 
-    QSerialPort m_serialPort;
+    sendIF m_serialPort;
 
     frmSettings *m_settings;
     frmAbout m_frmAbout;

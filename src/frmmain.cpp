@@ -35,6 +35,7 @@
 #include "frmmain.h"
 #include "ui_frmmain.h"
 
+
 frmMain::frmMain(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::frmMain)
@@ -263,6 +264,7 @@ frmMain::frmMain(QWidget *parent) :
     if (m_settings->port() != "") {
         m_serialPort.setPortName(m_settings->port());
         m_serialPort.setBaudRate(m_settings->baud());
+        m_serialPort.setTcp(m_settings->port().indexOf('.') > 0);
     }
 
     connect(&m_serialPort, SIGNAL(readyRead()), this, SLOT(onSerialPortReadyRead()), Qt::QueuedConnection);
@@ -787,7 +789,7 @@ void frmMain::sendCommand(QString command, int tableIndex, bool showInConsole)
         m_fileEndSent = true;
     }
 
-    m_serialPort.write((command + "\r").toLatin1());
+    m_serialPort.write((command + "\n").toLatin1());
 }
 
 void frmMain::grblReset()
@@ -2166,6 +2168,7 @@ void frmMain::on_actServiceSettings_triggered()
             if (m_serialPort.isOpen()) m_serialPort.close();
             m_serialPort.setPortName(m_settings->port());
             m_serialPort.setBaudRate(m_settings->baud());
+            m_serialPort.setTcp(m_settings->port().indexOf('.') > 0);
             openPort();
         }
 
