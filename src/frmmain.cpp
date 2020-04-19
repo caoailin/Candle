@@ -1372,9 +1372,10 @@ void frmMain::onSerialPortError(QSerialPort::SerialPortError error)
 {
     static QSerialPort::SerialPortError previousError;
 
-    if (error != QSerialPort::NoError && error != previousError) {
+    if (error != QSerialPort::NoError) {
+        if(error != previousError)
+            ui->txtConsole->appendPlainText(tr("Serial port error ") + QString::number(error) + ": " + m_serialPort.errorString());
         previousError = error;
-        ui->txtConsole->appendPlainText(tr("Serial port error ") + QString::number(error) + ": " + m_serialPort.errorString());
         if (m_serialPort.isOpen()) {
             m_serialPort.close();
             updateControlsState();

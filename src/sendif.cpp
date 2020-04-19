@@ -48,8 +48,10 @@ void sendIF::setPortName(const QString &name)
 bool sendIF::open(QIODevice::OpenMode mode)
 {
     if(m_isTCP){
-        m_pTcpSocket.connectToHost(m_portName,m_BaudRate);
-        return m_pTcpSocket.waitForConnected(3000) && QIODevice::open(mode);
+        int state = m_pTcpSocket.state();
+        if(state != QTcpSocket::ConnectingState && state != QTcpSocket::ConnectedState)
+           m_pTcpSocket.connectToHost(m_portName,m_BaudRate);
+        return (state == QTcpSocket::ConnectedState) && QIODevice::open(mode);
     }else{
         return m_serialPort.open(mode) && QIODevice::open(mode);
     }
@@ -175,6 +177,7 @@ void sendIF::onSocketError(QAbstractSocket::SocketError err)
         break;
     }
 }
+
 
 qint64 sendIF::readData(char *data, qint64 maxSize)
 {
